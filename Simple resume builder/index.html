@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+    
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Resume Builder</title>
+</head>
+<body>
+    <div class="container" id ="cv-form">
+        <h1 class="text-center">Resume Builder</h1>
+     <p class="text-center">By Dev Sahrawat </p>
+
+     <div class="row">
+         <div class="col-md-6">
+             <!--first column-->
+             <!--column that takes 6/12 grids-->
+             <h3>Personal Inforamtion</h3>
+             <div class="form-group">
+                 <label for="nameField">Your Name</label>
+                 <input type="text" 
+                 id = nameField 
+                 placeholder="Enter Name"
+                 class="form-control">
+             </div>
+             <div class="form-group mt-2">
+                <label for="contactField">Your Contact</label>
+                <input type="text" 
+                id = contactField 
+                placeholder="Enter contact details"
+                class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="addressField">Your Address</label>
+                <textarea type="text" 
+                id = addressField 
+                placeholder="Enter Address"
+                class="form-control"
+                rows = 5></textarea>
+            </div>
+
+            <div class="form-group mt-2 ">
+                <label for="">Select your Picture</label>
+
+                <input id="imgField" type="file" class="form-control">
+
+
+            </div>
+
+
+            <p class="text-primary my-3" >Important links</p>
+           
+            <div class="form-group">
+                <label for="fbField">Facebook ID</label>
+                <input type="text" 
+                id = "fbField" 
+                placeholder="Enter facebook handle"
+                class="form-control">
+            </div>
+            <div class="form-group mt-1">
+                <label for="linkedinField">Linkedin ID</label>
+                <input type="text" 
+                id =  "linkedinField"
+                placeholder="Enter your Linkedin ID"
+                class="form-control">
+            </div>
+            <div class="form-group mt-1">
+                <label for="githubeiField">GitHub ID</label>
+                <input type="text" 
+                id = githubeiField 
+                placeholder="Enter your Github ID"
+                class="form-control">
+            </div>
+
+
+
+
+             
+         </div>
+
+         <div class="col-md-6">
+             <!--second column-->
+             <h3>Professional Information</h3>
+
+             <div class="form-group">
+                <label for="">Objectives</label>
+                <textarea 
+                id ="objectiveField"
+                type="text" 
+                placeholder="Enter here "
+                class="form-control "
+                rows = 2></textarea>
+            </div>
+
+
+            <div class="form-group mt-2" id="aq">
+                <label for="">Academic Qualifications</label>
+                <textarea type="text" 
+                placeholder="Enter here"
+                class="form-control aqField"
+                rows = 2></textarea>
+
+                <div class="container text-center mt-2"  id ="aqAddButton">
+                    <button onclick="addNewAQField()" class= " btn btn-primary btn-sm">Add More</button>
+                </div>
+            </div>
+            
+            <div class="form-group mt-2" id ="we">
+                <label for="">Work Experiences</label>
+                <textarea type="text" 
+                placeholder="Enter here"
+                class="form-control weField"
+                rows = 2></textarea>
+
+                
+                
+
+                <div class="container text-center mt-2 " id ="weAddButton">
+                    <button onclick="addNewWEField()" class= " btn btn-primary btn-sm">Add Experience</button>
+                </div>
+            </div>
+            
+         </div>
+
+        </div>
+
+        <div class="container text-center mt-3">
+    
+        <button onClick="generateCV()" class="btn btn-primary btn-lg">Get your CV</button>         
+         </div>
+
+     </div>
+ 
+     <div class="container" id="cv-template">
+
+     <div class="row">
+
+        <div class="col-md-4 text-center background">
+            <!-- first col -->
+            <img src="https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg"
+            alt="" 
+            class="img-fluid myimg"
+            id="imgT">
+
+            <div class="container">
+                <p id ="nameT1">Name</p>
+                <p id="contactT">contact</p>
+                <p id="addressT">address</p>
+
+                <hr />
+
+                <p id ="fbT"><a href="#1">https://getbootstrap.com/docs/5.0/content/images/</a></p>
+                <p id="linkedT"><a href="#1">https://getbootstrap.com/docs/5.0/content/images/</a></p>
+                <p id = "githubT"><a href="#1">https://getbootstrap.com/docs/5.0/content/images/</a></p>
+
+                
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="col-md-8 py-5">
+
+            <!-- second col -->
+
+            <h1 id="nameT2" class="text-center" style="font-weight:900">Dev Sahrawat            </h1>
+
+            <!-- objective card -->
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Objectives</h3>
+                </div>
+                
+                <div class="card-body">
+                    <p id ="objectiveT">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Incidunt, quod in, tempore deleniti assumenda, fuga minima
+                         doloribus fugiat et possimus quam obcaecati eos iste enim 
+                         similique nobis. Fugiat obcaecati vel labore nulla et dolorum,
+                          sunt ducimus cum natus veniam magni a totam sed quis corporis 
+                          harum quia libero. Officiis, harum.</p>
+                </div>
+            </div>
+           
+            <!-- work experience -->
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Work Experience</h3>
+                </div>
+                
+                <div class="card-body">
+                   <ul id="weT">
+                       <li>Lorem ipsum dolor sit amet consectetur 
+                           adipisicing elit. Quam, quidem.</li>
+                       <li>Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Quam, quidem.</li>
+                       <li>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Quam, quidem.</li>   
+                   </ul>
+                </div>
+            </div>
+
+
+            <!-- Academic Qualifications -->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Academic Qualifications</h3>
+                </div>
+                
+                <div class="card-body">
+                   <ul id="aqT">
+                       <li>Lorem ipsum dolor sit amet consectetur 
+                           adipisicing elit. Quam, quidem.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Quam, quidem.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Quam, quidem.</li>   
+                   </ul>
+                </div>
+            </div>
+
+            <div class="container mt-3 text-center">
+                <button onClick ="printCV()" class="btn">PRINT CV</button>
+            </div>
+
+
+
+
+
+        </div>
+
+     </div>
+     </div>
+
+
+    <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+    crossorigin="anonymous"></script>  
+ <script src="script.js"></script>   
+</body>
+</html>
